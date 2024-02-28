@@ -14,8 +14,8 @@ const Signup = () => {
     }
 
     return (
-        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100 ">
-            <div className="bg-white p-3 rounded w-25">
+        <div className="d-flex justify-content-center align-items-center bg-secondary vh-100 vw-100 " style={{width:"100%"}}>
+            <div className="bg-white p-3 rounded w-50">
                 <h2>Register</h2>
                 <form onSubmit={handleSubmit} action="">
                     <div className="mb-3">
