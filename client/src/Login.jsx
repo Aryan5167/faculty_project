@@ -15,7 +15,7 @@ const Login = () => {
       console.log(result)
       console.log("hello")  
       if (result.data == 'success') {
-        navigate('/home', { replace: true });
+        navigate('/student_dashboard', { replace: true });
       }
 
     }).catch(err => console.log(err))
