@@ -1,8 +1,10 @@
 import React from 'react'
-
+import NavBar from '../Components/Navbar/Navbar'
 function StudentLand() {
   return (
-    <div>StudentLand</div>
+    <div>
+      <NavBar />
+    </div>
   )
 }
 
