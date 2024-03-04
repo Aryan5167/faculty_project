@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import "./Navbar.scss"
+import {useLocation} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faBars, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 import {Menu,X} from 'lucide-react'
 
-function NavBar() {
+function Navbar() {
   const [isNavLeft, setIsNavLeft] = useState(false);
+
+  const location = useLocation();
+  const isStudentDashboard = location.pathname === '/student_dashboard';
 
   const handleHamburgerClick = () => {
     setIsNavLeft(true);
@@ -21,10 +26,12 @@ function NavBar() {
         <button className="hamburger-icon" onClick={handleHamburgerClick}>
         <Menu />
         </button>
-        <a href="index.html" className="logo">
-          <img src="https://www.yudiz.com/codepen/hero-banner/logo.png" alt="logo-image" />
-          {/* <h1>Campus</h1> */}
-        </a>
+        <Link to={isStudentDashboard ? "/student_dashboard" : "/faculty_dashboard"} className="logo" style={{textDecoration:"none"}}>
+        <h1>
+          <span className="nav-heading" style={{ color: "#3d4244  " }}>Campus</span>
+          <span className="nav-heading" style={{ color: "#fccb02" }}>Compass</span>
+        </h1>
+      </Link>
         <a href="#" className="search-icon">
           <span>Search</span>
           {/* <FontAwesomeIcon icon={faSearch} /> */}
@@ -38,8 +45,8 @@ function NavBar() {
           <ul>
             <li><a href="#"> Home </a></li>
             <li><a href="#"> about us </a></li>
-            <li><a href="#"> products </a></li>
-            <li><a href="#"> what we offers </a></li>
+            <li><a href="#"> Check Availability </a></li>
+            <li><a href="#"> Book a Slot </a></li>
             <li><a href="#"> contact us </a></li>
           </ul>
           <ul className="terms-links">
@@ -48,11 +55,13 @@ function NavBar() {
           </ul>
         </div>
       </div>
-      <div className="banner">
-        <div className="container">
-          <div className="banner-inner">
-            <div className="banner-image">
+      {/* <section className='hero-container'> */}
+      {/* <div className="banner" style={{background:'url("/images/pic.jpg")'}}>
+        <div className="container"> */}
+          {/* <div className="banner-inner">
+            <div className="banner-image" style={{backgroundImage:'url("../images/pic.jpg")'}}>
               <img src="https://www.yudiz.com/codepen/hero-banner/banner.png" alt="banner-image" />
+              <img src="/images/pic.jpg" alt="" />
             </div>
             <div className="banner-content">
               <h1>
@@ -62,11 +71,12 @@ function NavBar() {
               </h1>
               <a href="#" className="theme-btn">Get Quote</a>
             </div>
-          </div>
-        </div>
-      </div>
+          </div> */}
+        {/* </div>
+      </div> */}
+      {/* </section> */}
     </div>
   );
 }
 
-export default NavBar;
+export default Navbar;
