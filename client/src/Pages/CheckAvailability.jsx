@@ -1,8 +1,13 @@
 import React from 'react'
+import CheckHero from '../Components/CheckHero/CheckHero'
+import SearchBar from '../Components/SearchBar/SearchBar'
 
 function CheckAvailability() {
   return (
-    <div>CheckAvailability</div>
+    <div>
+      <CheckHero />
+      <SearchBar />
+    </div>
   )
 }
 

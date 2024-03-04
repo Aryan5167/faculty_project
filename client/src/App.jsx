@@ -10,11 +10,15 @@ import StudentLand from './Pages/StudentLand'
 import FacultyLand from './Pages/FacultyLand'
 
 import './App.css'
+import Footer from './Components/Footer/Footer'
+import Navbar from './Components/Navbar/Navbar'
+import CheckAvailability from './Pages/CheckAvailability'
 
 function App() {
 
   return (
     <BrowserRouter>
+    <Navbar />
       <Routes>
       <Route path="/" element={<Home />} ></Route>
         <Route path="/register" element={<SignupU/>} ></Route>
@@ -23,9 +27,10 @@ function App() {
         <Route path="/loginF" element={<LoginF />} ></Route>
       <Route path="/student_dashboard" element={<StudentLand />}></Route>
       <Route path="/faculty_dashboard" element={<FacultyLand />}></Route>
+      <Route path="/check_availability" element={<CheckAvailability />}></Route>
     
       </Routes>
-
+  <Footer />
     </BrowserRouter>
   )
 }

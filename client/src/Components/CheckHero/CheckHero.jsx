@@ -1,7 +1,7 @@
 import React from 'react'
-import "./Hero.scss"
+import "./CheckHero.scss"
 // import SearchBar from '../SearchBar/SearchBar'
-function Hero() {
+function CheckHero() {
 
   return (
     <section className="hero-container"  >
@@ -10,9 +10,7 @@ function Hero() {
             <div className="hero-image" style={{backgroundImage:`url("../images/high.jpg")`}}>
                
             </div>
-            <h1>Welcome to  </h1>
-          
-            <p>Cabin Connect</p>
+            <h1>Check Availability</h1>
         
             {/* <SearchBar /> */}
         
@@ -22,4 +20,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default CheckHero

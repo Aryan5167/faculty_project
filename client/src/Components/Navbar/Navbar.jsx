@@ -28,8 +28,8 @@ function Navbar() {
         </button>
         <Link to={isStudentDashboard ? "/student_dashboard" : "/faculty_dashboard"} className="logo" style={{textDecoration:"none"}}>
         <h1>
-          <span className="nav-heading" style={{ color: "#3d4244  " }}>Campus</span>
-          <span className="nav-heading" style={{ color: "#fccb02" }}>Compass</span>
+          <span className="nav-heading" style={{ color: "#3d4244  " }}>Cabin</span>
+          <span className="nav-heading" style={{ color: "#fccb02" }}>Connect</span>
         </h1>
       </Link>
         <a href="#" className="search-icon">
@@ -43,9 +43,9 @@ function Navbar() {
           <X />
           </button>
           <ul>
-            <li><a href="#"> Home </a></li>
+            <li><a href="/student_dashboard"> Home </a></li>
             <li><a href="#"> about us </a></li>
-            <li><a href="#"> Check Availability </a></li>
+            <li><a href="/check_availability"> Check Availability </a></li>
             <li><a href="#"> Book a Slot </a></li>
             <li><a href="#"> contact us </a></li>
           </ul>
